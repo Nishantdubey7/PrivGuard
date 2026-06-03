@@ -1,0 +1,8 @@
+{
+    "video_duration_sec": 10.375,
+    "faces_redacted": 249,
+    "plates_redacted": 0,
+    "pii_detected": {},
+    "privacy_risk_score": 50,
+    "max_score": 50
+}

@@ -1,0 +1,20 @@
+# RE-DACT Video Redaction Engine — Python Dependencies
+# Install with:  py -m pip install -r requirements.txt
+
+# Core
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# AI / Detection
+ultralytics           # YOLOv8 (plate/object detection)
+easyocr               # OCR text extraction
+
+# Face Detection (Haar Cascade is built into OpenCV — no extra package needed)
+# Face Recognition
+dlib-bin              # Pre-built dlib binary (no CMake needed)
+
+# Audio
+ffmpeg-python         # Python ffmpeg bindings (ffmpeg binary must be in PATH)
+
+# Utilities
+ffmpeg-downloader     # Optional: downloads ffmpeg binary
