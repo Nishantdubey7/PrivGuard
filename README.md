@@ -6,7 +6,6 @@ PrivGuard is an AI-powered data redaction and anonymization platform designed to
 The platform combines Natural Language Processing (NLP), speech processing, and document analysis techniques to automate privacy-preserving workflows while maintaining data utility. It is designed to support privacy compliance requirements such as GDPR and HIPAA.
 
 ## Key Features
----
 ## Text Anonymization
 - Automated detection and anonymization of sensitive entities.
 - Supports names, email addresses, phone numbers, Aadhaar numbers, PAN numbers, and custom entity types.
@@ -20,6 +19,40 @@ The platform combines Natural Language Processing (NLP), speech processing, and 
 - Detection and anonymization of sensitive information from visual content.
 - Utility-Preserving Pseudonymization
 - Entity replacement techniques that maintain contextual meaning while protecting privacy.
+
+---
+
+## 📦 Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js |
+| Backend | FastAPI |
+| NLP / PII Detection | spaCy |
+| Audio Transcription | WhisperX |
+| PDF Processing | PyMuPDF |
+| API Testing | Postman |
+
+---
+## 🏗️ Architecture
+
+```
+User Input (Text / PDF / Audio)
+        │
+        ▼
+   FastAPI Backend
+        │
+   ┌────┴────┐
+   │         │
+spaCy NLP  WhisperX
+(PII detect) (Audio → transcript)
+   │         │
+PyMuPDF    Redaction Engine
+(PDF ops)       │
+   └────┬────┘
+        │
+   Anonymized Output
+```
 
 ## 🚀 Running the Project
 
@@ -76,5 +109,11 @@ npm run dev
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![React](https://img.shields.io/badge/React-Frontend-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
+
+## 👨‍💻 Author
+
+**Nishant Dubey**
+[LinkedIn](https://linkedin.com/in/nishantdubey6) · [GitHub](https://github.com/Nishantdubey7) · nishantdubey711@gmail.com
+
 
 
